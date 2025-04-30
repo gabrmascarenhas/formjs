@@ -40,7 +40,7 @@ forms.addEventListener("submit", (event) => { //() => arrow function
 function verify(campo){
     if(campo.value == ''){
         campo.focus();
-        mensagem.textContent = `Informe seu  ${campo.getAttribute('id')}`;
+        mensagem.textContent = `Informe seu  ${campo.getAttribute('id')}.`;
         return true;
     }
     return false;
@@ -63,3 +63,12 @@ if (hasSpecialChar(frase.value)) {
 }
 
 });
+
+const strverify = /[^\p{L}\s+]/gu;
+function keyup (event){
+  console.log(`antes de fazer a sanitização: ${event.value}`);
+  event.value = event.value.replaceAll(strverify, '');
+  console.log(`depois da sanitização: ${event.value}`)
+
+
+}
