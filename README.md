@@ -1,3 +1,2 @@
-#Projeto de Formulário em JavaScript
-        ##Testes com functions
-        ##Testes com regexush
+# Teste de formulário de cadastro em JavaScript
+##                 Utilizando funções e implementando regex
